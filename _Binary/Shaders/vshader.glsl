@@ -7,6 +7,6 @@ uniform mat4 world;
 
 void main()
 {
-	gl_Position =  vPosition  * perspective;
+	gl_Position =  vPosition * world * perspective;
 	//gl_Position = perspective * world * vPosition;
 }
