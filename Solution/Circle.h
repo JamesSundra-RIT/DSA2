@@ -18,7 +18,7 @@ class Circle
 		virtual ~Circle(void);
 		
 		void Init(void);
-		void Render(void);
+		void Render(glm::mat4x4* projectionMaxtrix, glm::mat4x4* viewMatrix);
 		glm::vec3 GetOrigin(void);
 		GLfloat GetRadius(void);
 		void AddForce(glm::vec3 vForce);

@@ -55,17 +55,9 @@ void Circle::Init()
     GLuint loc = glGetAttribLocation( myShaderProgram, "vPosition" );
     glEnableVertexAttribArray( loc );
     glVertexAttribPointer( loc, 3, GL_FLOAT, GL_FALSE, 0, (void*)0 );
-
-	// Get the location of a uniform shader variable named 'ortho'.
-	GLint perspectiveLoc = glGetUniformLocation(myShaderProgram, "perspective");
-	// Now set it to the orthographic projection.
-	//glm::mat4 cameraMatrix = glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f);
-	glm::mat4 cameraMatrix = glm::frustum(-10.0f, 10.0f, -10.0f, 10.0f, .01f, 10.0f);
-	//glm::mat4 cameraMatrix = glm::perspective(60.0f, 1.0f, 0.1f, 100.0f);
-	glProgramUniformMatrix4fv(myShaderProgram, perspectiveLoc, 1, false, glm::value_ptr(cameraMatrix));
 }
 
-void Circle::Render(void)
+void Circle::Render(glm::mat4x4* projectionMatrix, glm::mat4x4* viewMatrix)
 {
 	// Use the buffer and shader for each circle.
 	glUseProgram( myShaderProgram );
@@ -82,13 +74,13 @@ void Circle::Render(void)
 	glm::mat4 mat4Composed = mat4Translate * mat4Scale;
 	glProgramUniformMatrix4fv(myShaderProgram, worldLoc, 1, true,  glm::value_ptr(mat4Composed) );
 
-	/*origin += velocity / 500.0f;
+	// Get the location of a uniform shader variable named 'projection'.
+	GLint viewLoc = glGetUniformLocation(myShaderProgram, "view");
+	glProgramUniformMatrix4fv(myShaderProgram, viewLoc, 1, false, glm::value_ptr(*viewMatrix));
 
-	if (origin.x + radius > 20.0f || origin.x - radius < -20.0f)
-		velocity.x *= -1;
-
-	if (origin.y + radius > 20.0f || origin.y - radius < -20.0f)
-		velocity.y *= -1;*/
+	// Get the location of a uniform shader variable named 'projection'.
+	GLint projectionLoc = glGetUniformLocation(myShaderProgram, "projection");
+	glProgramUniformMatrix4fv(myShaderProgram, projectionLoc, 1, false, glm::value_ptr(*projectionMatrix));
 
 	glDrawArrays(GL_TRIANGLE_FAN, 0, NUM_VERTICES);
 }
@@ -105,7 +97,7 @@ void Circle::GeneratePoints(void)
 		// Offset the x and y coordinate by the origin, thus displacing the circle.
 		x += origin.x;
 		y += origin.y;
-		z = 1;
+		z = 0;
 		points[i] = glm::vec3(x,y,z);
 	}
 }
