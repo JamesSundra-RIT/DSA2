@@ -22,5 +22,6 @@ Created by Alberto Bobadilla (labigm@rit.edu) in 2014
 //Application
 #include "AngelShaderCompiler.h"
 #include "Circle.h"
+#include "Camera.h"
 
 #endif //__SYSTEM_H_
