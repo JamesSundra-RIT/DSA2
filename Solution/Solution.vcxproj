@@ -109,6 +109,7 @@ xcopy "$(SolutionDir)$(SolutionName)\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClInclude Include="Application.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Cube.h" />
     <ClInclude Include="System.h" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +124,7 @@ xcopy "$(SolutionDir)$(SolutionName)\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Cube.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

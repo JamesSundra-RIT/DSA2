@@ -1,4 +1,4 @@
-﻿Build started 4/18/2014 9:17:03 PM.
+﻿Build started 4/22/2014 9:00:02 AM.
      1>Project "C:\Users\James\Documents\GitHub\DSA2\Solution\Solution.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\James\Documents\GitHub\DSA2\include /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction\Debug\\" /Fd"C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Application.cpp
@@ -9,6 +9,7 @@
          C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction\Debug\Application.obj
          C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction\Debug\Camera.obj
          C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction\Debug\Circle.obj
+         C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction\Debug\Cube.obj
          Solution.vcxproj -> C:\Users\James\Documents\GitHub\DSA2\Z_DELETE\Diffraction_d.exe
        PostBuildEvent:
          mkdir “C:\Users\James\Documents\GitHub\DSA2\_Binary\”
@@ -32,4 +33,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.02
+Time Elapsed 00:00:02.81

@@ -8,6 +8,5 @@ uniform mat4 world;
 
 void main()
 {
-	//gl_Position =  vPosition * world * view * projection;
 	gl_Position = projection * view * world * vPosition;
 }

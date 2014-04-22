@@ -7,15 +7,17 @@ Created by Alberto Bobadilla (labigm@rit.edu) in 2014
 
 Camera* camera = nullptr;
 Circle* disk = nullptr;
+Cube* cube = nullptr;
 
 
 void Init( void )
 {
 	glm::vec3 vOrigin(0.0f, 0.0f, 0.0f);
 
-	camera = new Camera(0, 0, 0.2f);
+	camera = new Camera(0, 0, 10.0f);
 
-	disk = new Circle(vOrigin, 0.5f);
+	disk = new Circle(vOrigin, 1.0f);
+	cube = new Cube(vOrigin, 1.0f);
 	
 	glClearColor( 1.0, 1.0, 1.0, 1.0 ); // white background
 }
@@ -24,12 +26,11 @@ void Display( void )
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	
-	glm::mat4 projectionMatrix = glm::lookAt(camera->GetPosition(), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
-	glm::mat4 viewMatrix = glm::translate(0.0f, 0.0f, 0.0f);
+	glm::mat4 projectionMatrix = glm::perspective(45.0f, 1.0f*1/1, 0.1f, 100.0f);
+	glm::mat4 viewMatrix = glm::lookAt(camera->GetPosition(), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	disk->Render(&projectionMatrix, &viewMatrix);
+	//cube->Render(&projectionMatrix, &viewMatrix);
 
 	glutSwapBuffers();
 	glutPostRedisplay();
@@ -94,10 +95,14 @@ int main( int argc, char **argv )
 	//glutSpecialUpFunc( OnSpecialUp );
 	glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
     glutMainLoop();
-	if(disk)
-	{
+	if(disk){
 		delete disk;
 		disk = nullptr;
 	}
+	if(cube){
+		delete cube;
+		cube = nullptr;
+	}
+
     return 0;
 }
