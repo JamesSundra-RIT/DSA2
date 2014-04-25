@@ -16,6 +16,8 @@ void PolygonClass::GeneratePoligon(int a_nSides, float a_fSize)
 							0.0f));
 		AddVertexColor( 1.0f, 1.0f, 1.0f);
 		AddVertexUV( 0.0f, 0.0f);
+		AddVertexNormal(0.0f, 0.0f, 0.0f);
+		AddVertexTangent(0.0f, 0.0f, 0.0f);
 	}
 	InitGPU();
 }
