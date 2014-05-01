@@ -1,75 +1,67 @@
-﻿Build started 4/24/2014 8:43:43 AM.
-     1>Project "C:\Users\James\Downloads\ModelManager\Solution\Solution.vcxproj" on node 2 (Build target(s)).
+﻿Build started 5/1/2014 4:14:23 PM.
+     1>Project "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Solution.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\James\Downloads\ModelManager\include /IC:\Users\James\Downloads\ModelManager\include\GL\x86\include /IC:\Users\James\Downloads\ModelManager\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\\" /Fd"C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ApplicationClass.cpp CameraClass.cpp FrameClass.cpp InstanceClass.cpp Main.cpp ModelClass.cpp ModelManagerClass.cpp PolygonClass.cpp PolyhedronClass.cpp ShapeClass.cpp
-         CameraClass.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include" /I"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\GL\x86\include" /I"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\SOIL" /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\\" /Fd"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ModelClass.cpp PolygonClass.cpp ShapeClass.cpp
          ShapeClass.cpp
-         PolyhedronClass.cpp
          PolygonClass.cpp
-         ModelManagerClass.cpp
          ModelClass.cpp
-         Main.cpp
-         InstanceClass.cpp
-         FrameClass.cpp
-         ApplicationClass.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP_d.exe" /INCREMENTAL /NOLOGO glew32.lib freeglut.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP_d.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP_d.lib" /MACHINE:X86 C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\ICON.res
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\AngelShaderCompiler.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\ApplicationClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\CameraClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\EmptyClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\EmptySingletonClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\FileReaderClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\FolderClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\FrameClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\InstanceClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\Main.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\MaterialClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\MaterialManagerClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\ModelClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\ModelManagerClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\PolygonClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\PolyhedronClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\ShapeClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\SystemClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\TextureClass.obj
-         C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP\Debug\TextureManagerClass.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP_d.exe" /INCREMENTAL /NOLOGO glew32.lib freeglut.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP_d.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP_d.lib" /MACHINE:X86 "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\ICON.res"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\AngelShaderCompiler.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\ApplicationClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\CameraClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\EmptyClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\EmptySingletonClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\FileReaderClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\FolderClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\FrameClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\InstanceClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\Main.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\MaterialClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\MaterialManagerClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\ModelClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\ModelManagerClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\PolygonClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\PolyhedronClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\ShapeClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\SystemClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\TextureClass.obj"
+         "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP\Debug\TextureManagerClass.obj"
          SOIL.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
      1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
      1>AngelShaderCompiler.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
      1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
-     1>SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'C:\Users\James\Downloads\ModelManager\Z_DELETE\vc110.pdb'; linking object as if no debug info
-     1>SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'C:\Users\James\Downloads\ModelManager\Z_DELETE\vc110.pdb'; linking object as if no debug info
-     1>SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'C:\Users\James\Downloads\ModelManager\Z_DELETE\vc110.pdb'; linking object as if no debug info
-     1>SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'C:\Users\James\Downloads\ModelManager\Z_DELETE\vc110.pdb'; linking object as if no debug info
-         Solution.vcxproj -> C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP_d.exe
+     1>SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\vc110.pdb'; linking object as if no debug info
+     1>SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\vc110.pdb'; linking object as if no debug info
+     1>SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\vc110.pdb'; linking object as if no debug info
+     1>SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\vc110.pdb'; linking object as if no debug info
+         Solution.vcxproj -> Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP_d.exe
        PostBuildEvent:
-         mkdir “C:\Users\James\Downloads\ModelManager\_Binary\”
-         mkdir “C:\Users\James\Downloads\ModelManager\_Binary\Shaders\”
-         copy “C:\Users\James\Downloads\ModelManager\Z_DELETE\SolutionCPP_d.exe” “C:\Users\James\Downloads\ModelManager\_Binary”
-         xcopy "C:\Users\James\Downloads\ModelManager\include\GL\x86\bin" "C:\Users\James\Downloads\ModelManager\_Binary" /y
-         xcopy "C:\Users\James\Downloads\ModelManager\Solution\Shaders" "C:\Users\James\Downloads\ModelManager\_Binary\Shaders" /y
+         mkdir “Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary\”
+         mkdir “Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary\Shaders\”
+         copy “Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Z_DELETE\SolutionCPP_d.exe” “Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary”
+         xcopy "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\GL\x86\bin" "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary" /y
+         xcopy "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Shaders" "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary\Shaders" /y
          :VCEnd
-         A subdirectory or file C:\Users\James\Downloads\ModelManager\_Binary\ already exists.
-         A subdirectory or file C:\Users\James\Downloads\ModelManager\_Binary\Shaders\ already exists.
+         A subdirectory or file Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary\ already exists.
+         A subdirectory or file Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\_Binary\Shaders\ already exists.
                  1 file(s) copied.
-         C:\Users\James\Downloads\ModelManager\include\GL\x86\bin\freeglut.dll
-         C:\Users\James\Downloads\ModelManager\include\GL\x86\bin\glew32.dll
-         C:\Users\James\Downloads\ModelManager\include\GL\x86\bin\glew32mx.dll
-         C:\Users\James\Downloads\ModelManager\include\GL\x86\bin\GLFW.dll
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\GL\x86\bin\GLFW.dll
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\GL\x86\bin\freeglut.dll
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\GL\x86\bin\glew32.dll
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\include\GL\x86\bin\glew32mx.dll
          4 File(s) copied
-         C:\Users\James\Downloads\ModelManager\Solution\Shaders\Basic.fs
-         C:\Users\James\Downloads\ModelManager\Solution\Shaders\Basic.vs
-         C:\Users\James\Downloads\ModelManager\Solution\Shaders\Basic2.vs
-         C:\Users\James\Downloads\ModelManager\Solution\Shaders\fshader.glsl
-         C:\Users\James\Downloads\ModelManager\Solution\Shaders\vshader.glsl
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Shaders\Basic.fs
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Shaders\Basic.vs
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Shaders\Basic2.vs
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Shaders\fshader.glsl
+         Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Shaders\vshader.glsl
          5 File(s) copied
-     1>Done Building Project "C:\Users\James\Downloads\ModelManager\Solution\Solution.vcxproj" (Build target(s)).
+     1>Done Building Project "Z:\DSA2\ProjectDSA2\DSA2-master\DSA2-master\Solution\Solution.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.73
+Time Elapsed 00:00:44.07

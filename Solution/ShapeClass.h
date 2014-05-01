@@ -21,6 +21,7 @@ protected:
 	GLuint m_ColorBuffer; //OpenGL Buffer (Will hold the color buffer pointer)
 	GLuint m_UVBuffer; //OpenGL Buffer (Will hold the UV buffer pointer)
 	GLuint m_NormalBuffer;	//OpenGL Buffer (will hold the Nomal Buffer)
+	GLuint m_TangentBuffer;  
 	GLuint m_ShaderProgram; //OpenGL Shader Program
 
 	String m_sVShaderFile; //Vertex Shader File Name
@@ -31,7 +32,8 @@ protected:
 	int m_nVertices; //Number of vertices in the shape
 	std::vector<vector3> m_vVertexPosition; //Vector of Vertices
 	std::vector<vector3> m_vVertexColor; //Vector of Colors
-	std::vector<vector3> m_vVertexNormal; //Vecotr of Normals
+	std::vector<vector3> m_vVertexNormal; //Vector of Normals
+	std::vector<vector3> m_vVertexTangent; //Vector of Tangents
 	std::vector<vector2> m_vVertexUV; //vector of UVS
 	
 	CameraClass* m_pCamera; //Pointer to the singleton of CameraClass
@@ -86,6 +88,9 @@ public:
 	//Adds a new normal to the vector of vertices
 	void AddVertexNormal(vector3 input);
 	void AddVertexNormal(const float x, const float y, const float z);
+
+	void AddVertexTangent(vector3 input);
+	void AddVertexTangent(const float x, const float y, const float z);
 
 	//Adds a new uv to the vector of vertices
 	void AddVertexUV(vector2 input);

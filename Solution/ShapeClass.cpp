@@ -7,6 +7,7 @@ void ShapeClass::Init(void)
 	m_VertexBuffer = 0;
 	m_ColorBuffer = 0;
 	m_NormalBuffer = 0;
+	m_TangentBuffer = 0;
 	m_UVBuffer = 0;
 
 	m_nVertices = 0;
@@ -41,11 +42,13 @@ ShapeClass::ShapeClass(const ShapeClass& other)
 	m_ColorBuffer = other. m_ColorBuffer;
 	m_UVBuffer = other.m_UVBuffer;
 	m_NormalBuffer = other.m_NormalBuffer;
+	m_TangentBuffer = other.m_TangentBuffer;
 
 	m_vVertexPosition = other.m_vVertexPosition;
 	m_vVertexColor = other.m_vVertexColor;
 	m_vVertexUV = other.m_vVertexUV;
 	m_vVertexNormal = other.m_vVertexNormal;
+	m_vVertexTangent = other.m_vVertexTangent;
 
 	m_sVShaderFile = other.m_sVShaderFile;
 	m_sFShaderFile = other.m_sFShaderFile;
@@ -77,6 +80,7 @@ void ShapeClass::Swap(ShapeClass& other)
 	std::swap(this->m_vVertexPosition, other.m_vVertexPosition);
 	std::swap(this->m_vVertexColor, other.m_vVertexColor);
 	std::swap(this->m_vVertexNormal, other.m_vVertexNormal);
+	std::swap(this->m_vVertexTangent, other.m_vVertexTangent);
 	std::swap(this->m_vVertexUV, other.m_vVertexUV);
 
 	std::swap(this->m_mModel, other.m_mModel);
@@ -103,6 +107,7 @@ void ShapeClass::ReleaseVectors(void)
 	m_vVertexColor.clear();
 	m_vVertexUV.clear();
 	m_vVertexNormal.clear();
+	m_vVertexTangent.clear();
 }
 void ShapeClass::ReleaseOpenGL(void)
 {
@@ -110,6 +115,11 @@ void ShapeClass::ReleaseOpenGL(void)
 	{
 		glDeleteBuffers(1, &m_NormalBuffer);
 		m_NormalBuffer = -1;
+	}
+	if(m_TangentBuffer >=0 )
+	{
+		glDeleteBuffers(1, &m_TangentBuffer);
+		m_TangentBuffer = -1;
 	}
 	if(m_UVBuffer >= 0 )
 	{
@@ -140,6 +150,7 @@ void ShapeClass::ReleaseOpenGL(void)
 void ShapeClass::DisconectOpenGLFromShape(void)
 {
 	m_NormalBuffer = -1;
+	m_TangentBuffer = -1;
 	m_UVBuffer = -1;
 	m_ColorBuffer = -1;
 	m_VertexBuffer = -1;
@@ -182,6 +193,17 @@ void ShapeClass::AddVertexNormal(vector3 input)
 {
 	m_vVertexNormal.push_back(input);
 }
+
+void ShapeClass::AddVertexTangent(const float x, const float y, const float z)
+{
+	AddVertexTangent(vector3(x, y, z));
+}
+
+void ShapeClass::AddVertexTangent(vector3 input)
+{
+	m_vVertexTangent.push_back(input);
+}
+
 void ShapeClass::AddVertexUV(const float u, const float v)
 {
 	AddVertexUV(vector2(u,v));
@@ -218,6 +240,16 @@ void ShapeClass::InitGPU(String a_sVShaderFile, String a_sFShaderFile)
 	glBindBuffer(GL_ARRAY_BUFFER, m_UVBuffer);
 	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector2), &m_vVertexUV[0], GL_STATIC_DRAW);
 
+	//normal
+	glGenBuffers(1, &m_NormalBuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, m_NormalBuffer);
+	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexNormal[0], GL_STATIC_DRAW);
+
+	//tangent
+	/*glGenBuffers(1, &m_TangentBuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, m_TangentBuffer);
+	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexTangent[0], GL_STATIC_DRAW);*/
+
 	m_sVShaderFile = a_sVShaderFile;
 	m_sFShaderFile = a_sFShaderFile;
 
@@ -245,13 +277,48 @@ void ShapeClass::Render (GLenum mode)
 	GLuint vPosition = glGetAttribLocation( m_ShaderProgram, "vPosition" );
 	GLuint vUV = glGetAttribLocation( m_ShaderProgram, "vUV" );
 	GLuint vColor = glGetAttribLocation( m_ShaderProgram, "vColor" );
+	GLuint normal = glGetAttribLocation(m_ShaderProgram, "normal");
+	GLuint tangent = glGetAttribLocation(m_ShaderProgram, "tangent");
 	GLuint TextureID  = glGetUniformLocation(m_ShaderProgram, "TextureID");
+
+
+	GLuint model = glGetUniformLocation(m_ShaderProgram, "model");
+	GLuint view = glGetUniformLocation(m_ShaderProgram, "view");
+
+	GLuint hiliteColor = glGetUniformLocation(m_ShaderProgram, "hiliteColor");
+	GLuint lightPosition = glGetUniformLocation(m_ShaderProgram, "lightPosition");
+	GLuint eyePosition = glGetUniformLocation(m_ShaderProgram, "eyePosition");
+	GLuint r = glGetUniformLocation(m_ShaderProgram, "r");
+	GLuint d = glGetUniformLocation(m_ShaderProgram, "d");
+
+	
 
 	GLuint nTexture = glGetUniformLocation(m_ShaderProgram, "nTexture");
 	
 	// Final Projection of the Camera
 	glm::mat4 MVP = m_pCamera->CalculateProjection(m_mModel);
+	glm::mat4 viewMat = m_pCamera->GetView();
+	glUniformMatrix4fv(model, 1, GL_FALSE, glm::value_ptr(m_mModel));
+	glUniformMatrix4fv(view, 1, GL_FALSE, glm::value_ptr(viewMat));
 	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, glm::value_ptr(MVP));
+
+	glUniform3fv(hiliteColor, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 0.0)));
+	glUniform3fv(lightPosition, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 0.0)));
+	glUniform3fv(eyePosition, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 0.0)));
+
+	glUniform1f(d, 1.0);
+	glUniform1f(r, 1.0);
+
+	//normal
+	glEnableVertexAttribArray(normal);
+	glBindBuffer(GL_ARRAY_BUFFER, m_NormalBuffer);
+	glVertexAttribPointer(normal, 3, GL_FLOAT, GL_TRUE, 0, (void*)0);
+
+	//tangent
+	glEnableVertexAttribArray(tangent);
+	glBindBuffer(GL_ARRAY_BUFFER, m_TangentBuffer);
+	glVertexAttribPointer(tangent, 3, GL_FLOAT, GL_TRUE, 0, (void*)0);
+
 
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);

@@ -17,7 +17,7 @@ public:
 	void MoveSideways(float a_fDistance = 0.1f);
 	void MoveVertical(float a_fDistance = 0.1f);
 	void MoveForward(float a_fDistance = 0.1f);
-	
+
 	//Projection
 	void SetProjection();
 	void SetProjection(glm::mat4 a_mProjection);

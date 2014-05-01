@@ -110,7 +110,7 @@ Results ModelClass::LoadOBJ(String a_sFileName)
 	reader.Rewind();
 	int nGroupIndex = -1;
 	std::vector<vector3> vPosition; //Vector of Vertices
-	std::vector<vector3> vNormal; //Vecotr of Normals
+	std::vector<vector3> vNormal; //Vector of Normals
 	std::vector<vector2> vUV; //vector of UVS
 	int nMaterial = 0;
 

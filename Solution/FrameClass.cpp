@@ -10,6 +10,10 @@ void FrameClass::GeneratePoints(void)
 	//Asign values for the FrameClass points
 	AddVertexPosition(-100.0f, 0.0f, 0.0f);
 	AddVertexPosition( 100.0f, 0.0f, 0.0f);
+	AddVertexNormal(1.0f, 1.0f, 1.0f);
+	AddVertexNormal(1.0f, 1.0f, 1.0f);
+	AddVertexTangent(1.0f, 1.0f, 1.0f);
+	AddVertexTangent(1.0f, 1.0f, 1.0f);
 	AddVertexColor( 1.0f, 0.0f, 0.0f);
 	AddVertexColor( 1.0f, 0.0f, 0.0f);
 	AddVertexUV(0.0f, 0.0f);
@@ -17,6 +21,10 @@ void FrameClass::GeneratePoints(void)
 
 	AddVertexPosition( 0.0f,-100.0f, 0.0f);
 	AddVertexPosition( 0.0f, 100.0f, 0.0f);
+	AddVertexNormal(1.0f, 1.0f, 1.0f);
+	AddVertexNormal(1.0f, 1.0f, 1.0f);
+	AddVertexTangent(1.0f, 1.0f, 1.0f);
+	AddVertexTangent(1.0f, 1.0f, 1.0f);
 	AddVertexColor( 0.0f, 1.0f, 0.0f);
 	AddVertexColor( 0.0f, 1.0f, 0.0f);
 	AddVertexUV(0.0f, 0.0f);
@@ -24,6 +32,10 @@ void FrameClass::GeneratePoints(void)
 	
 	AddVertexPosition( 0.0f, 0.0f,-100.0f);
 	AddVertexPosition( 0.0f, 0.0f, 100.0f);
+	AddVertexNormal(1.0f, 1.0f, 1.0f);
+	AddVertexNormal(1.0f, 1.0f, 1.0f);
+	AddVertexTangent(1.0f, 1.0f, 1.0f);
+	AddVertexTangent(1.0f, 1.0f, 1.0f);
 	AddVertexColor( 0.0f, 0.0f, 1.0f);
 	AddVertexColor( 0.0f, 0.0f, 1.0f);
 	AddVertexUV(0.0f, 0.0f);
