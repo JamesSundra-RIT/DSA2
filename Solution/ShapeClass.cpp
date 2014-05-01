@@ -190,7 +190,7 @@ void ShapeClass::AddVertexNormal(vector3 input)
 
 void ShapeClass::AddVertexTangent(const float x, const float y, const float z)
 {
-	AddVertexNormal(vector3(x, y, z));
+	AddVertexTangent(vector3(x, y, z));
 }
 
 void ShapeClass::AddVertexTangent(vector3 input)
