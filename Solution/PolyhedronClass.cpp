@@ -34,6 +34,15 @@ void PolyhedronClass::GeneratePoints(int a_nLevels, float a_fSize)
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+
+		//calculate tangents
+		vector3 Tangent = glm::normalize(p1 - p0);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
 	
 		//Right Face
 		AddVertexPosition(p2);
@@ -45,6 +54,15 @@ void PolyhedronClass::GeneratePoints(int a_nLevels, float a_fSize)
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+
+		//calculate tangents
+		Tangent = glm::normalize(p2 - p1);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
 
 		//Back Face
 		AddVertexPosition(p1);
@@ -56,6 +74,15 @@ void PolyhedronClass::GeneratePoints(int a_nLevels, float a_fSize)
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+
+		//calculate tangents
+		Tangent = glm::normalize(p0 - p1);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
 
 		//Left Face
 		AddVertexPosition(p0);
@@ -67,6 +94,16 @@ void PolyhedronClass::GeneratePoints(int a_nLevels, float a_fSize)
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
 		AddVertexUV(0.0f, 0.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+		AddVertexNormal(0.0f,0.0f,1.0f);
+
+		//calculate tangents
+		Tangent = glm::normalize(p2 - p0);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
+		AddVertexTangent(Tangent);
+
 	}
 	InitGPU();
 }

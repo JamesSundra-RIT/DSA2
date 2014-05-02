@@ -116,6 +116,11 @@ void ShapeClass::ReleaseOpenGL(void)
 		glDeleteBuffers(1, &m_NormalBuffer);
 		m_NormalBuffer = -1;
 	}
+	if(m_TangentBuffer >=0 )
+	{
+		glDeleteBuffers(1, &m_TangentBuffer);
+		m_TangentBuffer = -1;
+	}
 	if(m_UVBuffer >= 0 )
 	{
 		glDeleteBuffers(1, &m_UVBuffer);
@@ -145,6 +150,7 @@ void ShapeClass::ReleaseOpenGL(void)
 void ShapeClass::DisconectOpenGLFromShape(void)
 {
 	m_NormalBuffer = -1;
+	m_TangentBuffer = -1;
 	m_UVBuffer = -1;
 	m_ColorBuffer = -1;
 	m_VertexBuffer = -1;
@@ -240,9 +246,9 @@ void ShapeClass::InitGPU(String a_sVShaderFile, String a_sFShaderFile)
 	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexNormal[0], GL_STATIC_DRAW);
 
 	//tangent
-	glGenBuffers(1, &m_TangentBuffer);
+	/*glGenBuffers(1, &m_TangentBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, m_TangentBuffer);
-	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexTangent[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexTangent[0], GL_STATIC_DRAW);*/
 
 	m_sVShaderFile = a_sVShaderFile;
 	m_sFShaderFile = a_sFShaderFile;

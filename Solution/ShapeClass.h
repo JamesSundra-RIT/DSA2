@@ -21,7 +21,7 @@ protected:
 	GLuint m_ColorBuffer; //OpenGL Buffer (Will hold the color buffer pointer)
 	GLuint m_UVBuffer; //OpenGL Buffer (Will hold the UV buffer pointer)
 	GLuint m_NormalBuffer;	//OpenGL Buffer (will hold the Nomal Buffer)
-	GLuint m_TangentBuffer; 
+	GLuint m_TangentBuffer;  
 	GLuint m_ShaderProgram; //OpenGL Shader Program
 
 	String m_sVShaderFile; //Vertex Shader File Name
@@ -33,7 +33,7 @@ protected:
 	std::vector<vector3> m_vVertexPosition; //Vector of Vertices
 	std::vector<vector3> m_vVertexColor; //Vector of Colors
 	std::vector<vector3> m_vVertexNormal; //Vector of Normals
-	std::vector<vector3> m_vVertexTangent;
+	std::vector<vector3> m_vVertexTangent; //Vector of Tangents
 	std::vector<vector2> m_vVertexUV; //vector of UVS
 	
 	CameraClass* m_pCamera; //Pointer to the singleton of CameraClass
