@@ -157,6 +157,7 @@ xcopy "$(SolutionDir)$(SolutionName)\Shaders" "$(SolutionDir)_Binary\Shaders" /y
     <None Include="Shaders\Basic.vs" />
     <None Include="Shaders\Basic2.vs" />
     <None Include="Shaders\vshader.glsl" />
+    <None Include="Shaders\vshader_diffraction.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

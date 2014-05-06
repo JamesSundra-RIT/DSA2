@@ -57,8 +57,8 @@ public:
 	void Release (void);
 
 	//Initializes the OpenGL vao, Buffer and Program
-	void InitGPU(	String a_sVShaderFile = "Shaders\\vshader.glsl", 
-					String a_sFShaderFile = "Shaders\\fshader.glsl");
+	void InitGPU(String a_sVShaderFile = "Shaders\\vshader.glsl", String a_sFShaderFile = "Shaders\\fshader.glsl");
+	//void InitGPU(String a_sVShaderFile = "Shaders\\vshader_diffraction.glsl", String a_sFShaderFile = "Shaders\\fshader.glsl");
 	
 	//Sets the Model Matrix in base of another Matrix (No Parameters sets the Identity)
 	void SetModelMatrix(const glm::mat4 a_mModel = glm::mat4(1.0f));

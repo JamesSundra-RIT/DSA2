@@ -192,5 +192,8 @@
     <None Include="Shaders\vshader.glsl">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="Shaders\vshader_diffraction.glsl">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
