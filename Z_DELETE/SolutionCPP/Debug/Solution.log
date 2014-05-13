@@ -1,30 +1,8 @@
-﻿Build started 5/6/2014 8:46:14 AM.
-     1>Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 5/13/2014 8:33:24 AM.
+     1>Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Users\jps1545\DSA2\DSA2\include /ID:\Users\jps1545\DSA2\DSA2\include\GL\x86\include /ID:\Users\jps1545\DSA2\DSA2\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\\" /Fd"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt AngelShaderCompiler.cpp ApplicationClass.cpp CameraClass.cpp EmptyClass.cpp EmptySingletonClass.cpp FileReaderClass.cpp FolderClass.cpp FrameClass.cpp InstanceClass.cpp Main.cpp MaterialClass.cpp MaterialManagerClass.cpp ModelClass.cpp ModelManagerClass.cpp PolygonClass.cpp PolyhedronClass.cpp ShapeClass.cpp SystemClass.cpp TextureClass.cpp TextureManagerClass.cpp
-         TextureManagerClass.cpp
-         TextureClass.cpp
-         SystemClass.cpp
-         ShapeClass.cpp
-         PolyhedronClass.cpp
-         PolygonClass.cpp
-         ModelManagerClass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Users\jps1545\DSA2\DSA2\include /ID:\Users\jps1545\DSA2\DSA2\include\GL\x86\include /ID:\Users\jps1545\DSA2\DSA2\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\\" /Fd"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ModelClass.cpp
          ModelClass.cpp
-         MaterialManagerClass.cpp
-         MaterialClass.cpp
-         Main.cpp
-         InstanceClass.cpp
-         FrameClass.cpp
-         FolderClass.cpp
-         FileReaderClass.cpp
-         EmptySingletonClass.cpp
-         EmptyClass.cpp
-         CameraClass.cpp
-         ApplicationClass.cpp
-         AngelShaderCompiler.cpp
-         Generating Code...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ICON.res" ..\res\ICON.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.exe" /INCREMENTAL /NOLOGO glew32.lib freeglut.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.lib" /MACHINE:X86 D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ICON.res
          D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\AngelShaderCompiler.obj
@@ -80,8 +58,8 @@
          D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\vshader.glsl
          D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\vshader_diffraction.glsl
          6 File(s) copied
-     1>Done Building Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:25.57
+Time Elapsed 00:00:03.90

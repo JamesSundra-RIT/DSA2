@@ -273,6 +273,12 @@ Results ModelClass::LoadOBJ(String a_sFileName)
 			m_vShape[nGroupIndex].AddVertexNormal(vNormal[nN1-1]);
 			m_vShape[nGroupIndex].AddVertexNormal(vNormal[nN2-1]);
 			m_vShape[nGroupIndex].AddVertexNormal(vNormal[nN3-1]);
+
+			glm::vec3 up = glm::vec3(0, 1, 0);
+			m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN1-1], up));
+			m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN2-1], up));
+			m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN3-1], up));
+
 			m_vShape[nGroupIndex].m_nMaterialIndex = nMaterial;
 		}
 #pragma endregion

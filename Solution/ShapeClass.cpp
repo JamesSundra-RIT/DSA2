@@ -246,9 +246,9 @@ void ShapeClass::InitGPU(String a_sVShaderFile, String a_sFShaderFile)
 	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexNormal[0], GL_STATIC_DRAW);
 
 	//tangent
-	/*glGenBuffers(1, &m_TangentBuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, m_TangentBuffer);
-	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexTangent[0], GL_STATIC_DRAW);*/
+  	glGenBuffers(1, &m_TangentBuffer);
+  	glBindBuffer(GL_ARRAY_BUFFER, m_TangentBuffer);
+  	glBufferData(GL_ARRAY_BUFFER, m_nVertices * sizeof(vector3), &m_vVertexTangent[0], GL_STATIC_DRAW);
 
 	m_sVShaderFile = a_sVShaderFile;
 	m_sFShaderFile = a_sFShaderFile;
