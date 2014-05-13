@@ -1,8 +1,10 @@
-﻿Build started 5/13/2014 8:33:24 AM.
+﻿Build started 5/13/2014 9:06:41 AM.
      1>Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Users\jps1545\DSA2\DSA2\include /ID:\Users\jps1545\DSA2\DSA2\include\GL\x86\include /ID:\Users\jps1545\DSA2\DSA2\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\\" /Fd"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ModelClass.cpp
-         ModelClass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Users\jps1545\DSA2\DSA2\include /ID:\Users\jps1545\DSA2\DSA2\include\GL\x86\include /ID:\Users\jps1545\DSA2\DSA2\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\\" /Fd"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ApplicationClass.cpp Main.cpp
+         Main.cpp
+         ApplicationClass.cpp
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.exe" /INCREMENTAL /NOLOGO glew32.lib freeglut.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.lib" /MACHINE:X86 D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ICON.res
          D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\AngelShaderCompiler.obj
@@ -62,4 +64,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.90
+Time Elapsed 00:00:05.21

@@ -73,8 +73,8 @@ int main(int argc, char **argv )
 	pSystem->KeyboardUp = &KeyboardUp;
 	pSystem->OnSpecial = &OnSpecial;
 	pSystem->OnSpecialUp = &OnSpecialUp;
-	pSystem->Mouse = &Mouse;
-	pSystem->MouseWheel = &MouseWheel;
+	//pSystem->Mouse = &Mouse;
+	//pSystem->MouseWheel = &MouseWheel;
 
 	//Init the callback calls
 	pSystem->InitCallbacks();

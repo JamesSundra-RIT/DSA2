@@ -53,9 +53,9 @@ void ApplicationClass::Update(void)
 	float time = m_pSystem->LapClock();
 	if(time > 1)
 	{
-		matrix4 matrix = m_pModelManager->GetModelMatrix("Earth");
+		/*matrix4 matrix = m_pModelManager->GetModelMatrix("Earth");
 		matrix = glm::translate(matrix, vector3(0.5f, 0.0f, 0.0f));
-		m_pModelManager->SetModelMatrix(matrix, "Earth");
+		m_pModelManager->SetModelMatrix(matrix, "Earth");*/
 		m_pSystem->StartClock();
 	}
 }
@@ -108,22 +108,23 @@ void ApplicationClass::Keyboard(unsigned char key, int x, int y)
 
 	switch (key)
 	{
-		case 'X':
+		case 's':
 			fAngX += fSpeed;
 			break;
-		case 'x':
+		
+		case 'w':
 			fAngX -= fSpeed;
 			break;
-		case 'Y':
+		case 'q':
 			fAngY += fSpeed;
 			break;
-		case 'y':
+		case 'e':
 			fAngY -= fSpeed;
 			break;
-		case 'Z':
+		case 'a':
 			fAngZ += fSpeed;
 			break;
-		case 'z':
+		case 'd':
 			fAngZ -= fSpeed;
 			break;
 		case 'r':
@@ -144,7 +145,10 @@ void ApplicationClass::Keyboard(unsigned char key, int x, int y)
 		oY = glm::rotate(glm::mat4(1.0f), fAngY, glm::vec3( 0.0f, 1.0f, 0.0f));
 		oZ = glm::rotate(glm::mat4(1.0f), fAngZ, glm::vec3( 0.0f, 0.0f, 1.0f));
 		orientation = oX * oZ * oY;
-		m_pPolyhedron->ModelMatrix = orientation;
+		
+		matrix4 matrix = m_pModelManager->GetModelMatrix("Earth");
+		matrix = orientation;
+		m_pModelManager->SetModelMatrix(matrix, "Earth");
 	}
 	else
 	{
