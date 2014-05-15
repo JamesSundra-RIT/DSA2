@@ -302,12 +302,12 @@ void ShapeClass::Render (GLenum mode)
 	glUniformMatrix4fv(view, 1, GL_FALSE, glm::value_ptr(viewMat));
 	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, glm::value_ptr(MVP));
 
-	glUniform3fv(hiliteColor, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 0.0)));
-	glUniform3fv(lightPosition, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 0.0)));
-	glUniform3fv(eyePosition, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 0.0)));
+	glUniform3fv(hiliteColor, 1, glm::value_ptr(glm::vec3(0.5, 0.5, 0.5))); //rgb between 0-1
+	glUniform3fv(lightPosition, 1, glm::value_ptr(glm::vec3(0.0, 1.5, 1.0))); //position light is coming from
+	glUniform3fv(eyePosition, 1, glm::value_ptr(glm::vec3(0.0, 0.0, 1.0))); //position of viewer
 
-	glUniform1f(d, 1.0);
-	glUniform1f(r, 1.0);
+	glUniform1f(d, 0.8); //between 0-1; diffraction (width of bump)
+	glUniform1f(r, 4.0); //roughness factor
 
 	//normal
 	glEnableVertexAttribArray(normal);

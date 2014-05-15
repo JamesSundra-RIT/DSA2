@@ -1,67 +1,88 @@
-﻿Build started 5/13/2014 9:06:41 AM.
-     1>Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" on node 2 (Build target(s)).
+﻿Build started 5/15/2014 1:03:52 PM.
+     1>Project "D:\Users\ala3497.MAIN.000\DSA2\Solution\Solution.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Users\jps1545\DSA2\DSA2\include /ID:\Users\jps1545\DSA2\DSA2\include\GL\x86\include /ID:\Users\jps1545\DSA2\DSA2\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\\" /Fd"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ApplicationClass.cpp Main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Users\ala3497.MAIN.000\DSA2\include /ID:\Users\ala3497.MAIN.000\DSA2\include\GL\x86\include /ID:\Users\ala3497.MAIN.000\DSA2\include\SOIL /ZI /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\\" /Fd"D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt AngelShaderCompiler.cpp ApplicationClass.cpp CameraClass.cpp EmptyClass.cpp EmptySingletonClass.cpp FileReaderClass.cpp FolderClass.cpp FrameClass.cpp InstanceClass.cpp Main.cpp MaterialClass.cpp MaterialManagerClass.cpp ModelClass.cpp ModelManagerClass.cpp PolygonClass.cpp PolyhedronClass.cpp ShapeClass.cpp SystemClass.cpp TextureClass.cpp TextureManagerClass.cpp
+         TextureManagerClass.cpp
+         TextureClass.cpp
+         SystemClass.cpp
+         ShapeClass.cpp
+     1>d:\users\ala3497.main.000\dsa2\solution\shapeclass.cpp(309): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         PolyhedronClass.cpp
+         PolygonClass.cpp
+         ModelManagerClass.cpp
+         ModelClass.cpp
+         MaterialManagerClass.cpp
+         MaterialClass.cpp
          Main.cpp
+         InstanceClass.cpp
+         FrameClass.cpp
+         FolderClass.cpp
+         FileReaderClass.cpp
+         EmptySingletonClass.cpp
+         EmptyClass.cpp
+         CameraClass.cpp
          ApplicationClass.cpp
+         AngelShaderCompiler.cpp
          Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\ICON.res" ..\res\ICON.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.exe" /INCREMENTAL /NOLOGO glew32.lib freeglut.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.lib" /MACHINE:X86 D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ICON.res
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\AngelShaderCompiler.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ApplicationClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\CameraClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\EmptyClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\EmptySingletonClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\FileReaderClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\FolderClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\FrameClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\InstanceClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\Main.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\MaterialClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\MaterialManagerClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ModelClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ModelManagerClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\PolygonClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\PolyhedronClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\ShapeClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\SystemClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\TextureClass.obj
-         D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP\Debug\TextureManagerClass.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP_d.exe" /INCREMENTAL /NOLOGO glew32.lib freeglut.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP_d.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP_d.lib" /MACHINE:X86 D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\ICON.res
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\AngelShaderCompiler.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\ApplicationClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\CameraClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\EmptyClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\EmptySingletonClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\FileReaderClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\FolderClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\FrameClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\InstanceClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\Main.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\MaterialClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\MaterialManagerClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\ModelClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\ModelManagerClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\PolygonClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\PolyhedronClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\ShapeClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\SystemClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\TextureClass.obj
+         D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP\Debug\TextureManagerClass.obj
          SOIL.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
      1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
      1>AngelShaderCompiler.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
      1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
-     1>SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'D:\Users\jps1545\DSA2\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
-     1>SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'D:\Users\jps1545\DSA2\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
-     1>SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'D:\Users\jps1545\DSA2\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
-     1>SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'D:\Users\jps1545\DSA2\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
-         Solution.vcxproj -> D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.exe
+     1>SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
+     1>SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
+     1>SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
+     1>SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\vc110.pdb'; linking object as if no debug info
+         Solution.vcxproj -> D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP_d.exe
        PostBuildEvent:
-         mkdir “D:\Users\jps1545\DSA2\DSA2\_Binary\”
-         mkdir “D:\Users\jps1545\DSA2\DSA2\_Binary\Shaders\”
-         copy “D:\Users\jps1545\DSA2\DSA2\Z_DELETE\SolutionCPP_d.exe” “D:\Users\jps1545\DSA2\DSA2\_Binary”
-         xcopy "D:\Users\jps1545\DSA2\DSA2\include\GL\x86\bin" "D:\Users\jps1545\DSA2\DSA2\_Binary" /y
-         xcopy "D:\Users\jps1545\DSA2\DSA2\Solution\Shaders" "D:\Users\jps1545\DSA2\DSA2\_Binary\Shaders" /y
+         mkdir “D:\Users\ala3497.MAIN.000\DSA2\_Binary\”
+         mkdir “D:\Users\ala3497.MAIN.000\DSA2\_Binary\Shaders\”
+         copy “D:\Users\ala3497.MAIN.000\DSA2\Z_DELETE\SolutionCPP_d.exe” “D:\Users\ala3497.MAIN.000\DSA2\_Binary”
+         xcopy "D:\Users\ala3497.MAIN.000\DSA2\include\GL\x86\bin" "D:\Users\ala3497.MAIN.000\DSA2\_Binary" /y
+         xcopy "D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders" "D:\Users\ala3497.MAIN.000\DSA2\_Binary\Shaders" /y
          :VCEnd
-         A subdirectory or file D:\Users\jps1545\DSA2\DSA2\_Binary\ already exists.
-         A subdirectory or file D:\Users\jps1545\DSA2\DSA2\_Binary\Shaders\ already exists.
+         A subdirectory or file D:\Users\ala3497.MAIN.000\DSA2\_Binary\ already exists.
+         A subdirectory or file D:\Users\ala3497.MAIN.000\DSA2\_Binary\Shaders\ already exists.
                  1 file(s) copied.
-         D:\Users\jps1545\DSA2\DSA2\include\GL\x86\bin\freeglut.dll
-         D:\Users\jps1545\DSA2\DSA2\include\GL\x86\bin\glew32.dll
-         D:\Users\jps1545\DSA2\DSA2\include\GL\x86\bin\glew32mx.dll
-         D:\Users\jps1545\DSA2\DSA2\include\GL\x86\bin\GLFW.dll
+         D:\Users\ala3497.MAIN.000\DSA2\include\GL\x86\bin\freeglut.dll
+         D:\Users\ala3497.MAIN.000\DSA2\include\GL\x86\bin\glew32.dll
+         D:\Users\ala3497.MAIN.000\DSA2\include\GL\x86\bin\glew32mx.dll
+         D:\Users\ala3497.MAIN.000\DSA2\include\GL\x86\bin\GLFW.dll
          4 File(s) copied
-         D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\Basic.fs
-         D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\Basic.vs
-         D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\Basic2.vs
-         D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\fshader.glsl
-         D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\vshader.glsl
-         D:\Users\jps1545\DSA2\DSA2\Solution\Shaders\vshader_diffraction.glsl
+         D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders\Basic.fs
+         D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders\Basic.vs
+         D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders\Basic2.vs
+         D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders\fshader.glsl
+         D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders\vshader.glsl
+         D:\Users\ala3497.MAIN.000\DSA2\Solution\Shaders\vshader_diffraction.glsl
          6 File(s) copied
-     1>Done Building Project "D:\Users\jps1545\DSA2\DSA2\Solution\Solution.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Users\ala3497.MAIN.000\DSA2\Solution\Solution.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.21
+Time Elapsed 00:00:29.72
