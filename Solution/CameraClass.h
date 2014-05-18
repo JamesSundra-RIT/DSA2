@@ -33,6 +33,9 @@ public:
 	glm::mat4 GetMVP();
 	__declspec(property(get = GetMVP)) glm::mat4 VMP;
 
+	//Accessors to helpful variables
+	glm::vec3 GetPosition();
+
 private:
 	CameraClass(void); // Constructor
 	CameraClass(CameraClass const& other); //Copy Constructor
@@ -51,6 +54,9 @@ private:
 	glm::mat4 m_mView;
 	//MVP
 	glm::mat4 m_mMVP;
+
+	//Helpful variables;
+	glm::vec3 position;
 };
 
 

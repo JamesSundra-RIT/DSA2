@@ -167,8 +167,8 @@ void ApplicationClass::KeyboardUp(unsigned char key, int x, int y)
 	case 'g':
 		m_bGridActive = !m_bGridActive;
 		break;
-	case 'Q':
-	case 'q':
+	case 'T':
+	case 't':
 		bUseQuaterions = !bUseQuaterions;
 		break;
     }

@@ -82,6 +82,11 @@ void CameraClass::SetPosition(glm::vec3 a_Postion)
 	glm::vec3 v3Up = glm::vec3(0.0f, 1.0f, 0.0f);
 
 	m_mView = glm::lookAt( a_Postion, v3At, v3Up );
+
+	position = a_Postion;
+}
+glm::vec3 CameraClass::GetPosition(){
+	return position;
 }
 void CameraClass::MoveSideways(float a_fDisntance)
 {
