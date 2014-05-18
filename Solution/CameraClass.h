@@ -35,6 +35,9 @@ public:
 
 	//Accessors to helpful variables
 	glm::vec3 GetPosition();
+	void Rotate(glm::vec3 rotation);
+	void Rotate(glm::vec3 axis, float amount);
+	void Rotate(float yaw, float pitch, float roll);
 
 private:
 	CameraClass(void); // Constructor
@@ -57,6 +60,9 @@ private:
 
 	//Helpful variables;
 	glm::vec3 position;
+	float yaw;
+	float pitch;
+	float roll;
 };
 
 

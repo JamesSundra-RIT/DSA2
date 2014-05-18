@@ -179,33 +179,23 @@ void ApplicationClass::OnSpecial(int key, int x, int y)
 	{
 		case GLUT_KEY_UP:
 			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->MoveForward(-1.1f);
-			m_pCamera->MoveForward(-0.1f);
+				m_pCamera->Rotate(0.0f, 3.0f, 0.0f);
+			m_pCamera->Rotate(0.0f, 1.0f, 0.0f);
 			break;
 		case GLUT_KEY_DOWN:
 			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->MoveForward( 1.1f);
-			m_pCamera->MoveForward( 0.1f);
+				m_pCamera->Rotate(0.0f, -3.0f, 0.0f);
+			m_pCamera->Rotate(0.0f, -1.0f, 0.0f);
 			break;
 		case GLUT_KEY_LEFT:
 			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->MoveSideways(-1.1f);
-			m_pCamera->MoveSideways(-0.1f);
+				m_pCamera->Rotate(3.0f, 0.0f, 0.0f);
+			m_pCamera->Rotate(1.0f, 0.0f, 0.0f);
 			break;
 		case GLUT_KEY_RIGHT:
 			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->MoveSideways( 1.1f);
-			m_pCamera->MoveSideways( 0.1f);
-			break;
-		case GLUT_KEY_PAGE_UP:
-			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->MoveVertical(1.1f);
-			m_pCamera->MoveVertical(0.1f);
-			break;
-		case GLUT_KEY_PAGE_DOWN:
-			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->MoveVertical(-1.1f);
-			m_pCamera->MoveVertical(-0.1f);
+				m_pCamera->Rotate(-3.0f, 0.0f, 0.0f);
+			m_pCamera->Rotate(-1.0f, 0.0f, 0.0f);
 			break;
 	}
 }

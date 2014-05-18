@@ -54,6 +54,10 @@ void CameraClass::SetView()
 	glm::vec3 v3At = v3Position + glm::vec3(0.0f, 0.0f, -1.0f);
 	glm::vec3 v3Up = glm::vec3(0.0f, 1.0f, 0.0f);
 
+	yaw = 0;
+	pitch = 0;
+	roll = 0;
+
 	m_mView = glm::lookAt( v3Position, v3At, v3Up );
 }
 void CameraClass::SetView(glm::mat4 a_mView)
@@ -78,7 +82,7 @@ glm::mat4 CameraClass::GetMVP()
 //Translation
 void CameraClass::SetPosition(glm::vec3 a_Postion)
 {
-	glm::vec3 v3At = a_Postion + glm::vec3(0.0f, 0.0f, -1.0f);
+	glm::vec3 v3At = glm::vec3(0.0f, 0.0f, 0.0f);
 	glm::vec3 v3Up = glm::vec3(0.0f, 1.0f, 0.0f);
 
 	m_mView = glm::lookAt( a_Postion, v3At, v3Up );
@@ -88,6 +92,23 @@ void CameraClass::SetPosition(glm::vec3 a_Postion)
 glm::vec3 CameraClass::GetPosition(){
 	return position;
 }
+
+void CameraClass::Rotate(glm::vec3 rotation){
+	Rotate(rotation.x, rotation.y, rotation.z);
+}
+
+void CameraClass::Rotate(glm::vec3 axis, float amount){
+	Rotate(axis.x * amount, axis.y * amount, axis.z * amount);
+}
+
+void CameraClass::Rotate(float yaw, float pitch, float roll){
+	this->yaw = fmod(this->yaw + yaw, 360);
+	this->pitch = fmod(this->pitch + pitch, 360);
+	SetPosition(glm::vec3(cos(this->pitch * glm::pi<float>()/180) * sin(this->yaw * glm::pi<float>()/180) * 5,
+						  sin(this->pitch * glm::pi<float>()/180) * 5,
+						  cos(this->pitch * glm::pi<float>()/180) * cos(this->yaw * glm::pi<float>()/180) * 5));
+}
+
 void CameraClass::MoveSideways(float a_fDisntance)
 {
 	m_mView = glm::translate(m_mView, glm::vec3(-a_fDisntance, 0.0f, 0.0f));
