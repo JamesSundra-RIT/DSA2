@@ -109,22 +109,28 @@ void ApplicationClass::Keyboard(unsigned char key, int x, int y)
 	switch (key)
 	{
 		case 's':
+		case 'S':
 			fAngX += fSpeed;
 			break;
 		
 		case 'w':
+		case 'W':
 			fAngX -= fSpeed;
 			break;
 		case 'q':
+		case 'Q':
 			fAngY += fSpeed;
 			break;
 		case 'e':
+		case 'E':
 			fAngY -= fSpeed;
 			break;
 		case 'a':
+		case 'A':
 			fAngZ += fSpeed;
 			break;
 		case 'd':
+		case 'D':
 			fAngZ -= fSpeed;
 			break;
 		case 'r':
@@ -133,6 +139,19 @@ void ApplicationClass::Keyboard(unsigned char key, int x, int y)
 			fAngY = 0.0f;
 			fAngZ = 0.0f;
 			break;
+
+		case 'i':
+		case 'I':
+			m_pCamera->RotateLight(0.0f, 3.0f, 0.0f);
+		case 'k':
+		case 'K':
+			m_pCamera->RotateLight(0.0f, -3.0f, 0.0f);
+		case 'j':
+		case 'J':
+			m_pCamera->RotateLight(-3.0f, 0.0f, 0.0f);
+		case 'l':
+		case 'L':
+			m_pCamera->RotateLight(3.0f, 0.0f, 0.0f);
 	}
 	
 	if(bUseQuaterions == false)
@@ -189,13 +208,13 @@ void ApplicationClass::OnSpecial(int key, int x, int y)
 			break;
 		case GLUT_KEY_LEFT:
 			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->Rotate(3.0f, 0.0f, 0.0f);
-			m_pCamera->Rotate(1.0f, 0.0f, 0.0f);
+				m_pCamera->Rotate(-3.0f, 0.0f, 0.0f);
+			m_pCamera->Rotate(-1.0f, 0.0f, 0.0f);
 			break;
 		case GLUT_KEY_RIGHT:
 			if (glutGetModifiers() == GLUT_ACTIVE_SHIFT)
-				m_pCamera->Rotate(-3.0f, 0.0f, 0.0f);
-			m_pCamera->Rotate(-1.0f, 0.0f, 0.0f);
+				m_pCamera->Rotate(3.0f, 0.0f, 0.0f);
+			m_pCamera->Rotate(1.0f, 0.0f, 0.0f);
 			break;
 	}
 }

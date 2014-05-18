@@ -303,7 +303,7 @@ void ShapeClass::Render (GLenum mode)
 	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, glm::value_ptr(MVP));
 
 	glUniform3fv(hiliteColor, 1, glm::value_ptr(glm::vec3(0.5, 0.5, 0.5))); //rgb between 0-1
-	glUniform3fv(lightPosition, 1, glm::value_ptr(glm::vec3(0.0, 1.5, 1.0))); //position light is coming from
+	glUniform3fv(lightPosition, 1, glm::value_ptr(m_pCamera->GetLightPosition())); //position light is coming from
 	glUniform3fv(eyePosition, 1, glm::value_ptr(m_pCamera->GetPosition())); //position of viewer
 
 	glUniform1f(d, 0.8); //between 0-1; diffraction (width of bump)

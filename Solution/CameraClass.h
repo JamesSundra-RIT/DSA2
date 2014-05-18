@@ -38,6 +38,11 @@ public:
 	void Rotate(glm::vec3 rotation);
 	void Rotate(glm::vec3 axis, float amount);
 	void Rotate(float yaw, float pitch, float roll);
+	
+	glm::vec3 GetLightPosition();
+	void RotateLight(glm::vec3 rotation);
+	void RotateLight(glm::vec3 axis, float amount);
+	void RotateLight(float yaw, float pitch, float roll);
 
 private:
 	CameraClass(void); // Constructor
@@ -63,6 +68,10 @@ private:
 	float yaw;
 	float pitch;
 	float roll;
+	
+	float lightYaw;
+	float lightPitch;
+	float lightRoll;
 };
 
 

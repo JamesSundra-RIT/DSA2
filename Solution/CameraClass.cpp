@@ -57,6 +57,9 @@ void CameraClass::SetView()
 	yaw = 0;
 	pitch = 0;
 	roll = 0;
+	lightYaw = 0;
+	lightPitch = 0;
+	lightRoll = 0;
 
 	m_mView = glm::lookAt( v3Position, v3At, v3Up );
 }
@@ -120,4 +123,23 @@ void CameraClass::MoveForward(float a_fDisntance)
 void CameraClass::MoveVertical(float a_fDisntance)
 {
 	m_mView = glm::translate(m_mView, glm::vec3(0.0f,-a_fDisntance, 0.0f));
+}
+
+void CameraClass::RotateLight(glm::vec3 rotation){
+	Rotate(rotation.x, rotation.y, rotation.z);
+}
+
+void CameraClass::RotateLight(glm::vec3 axis, float amount){
+	Rotate(axis.x * amount, axis.y * amount, axis.z * amount);
+}
+
+void CameraClass::RotateLight(float yaw, float pitch, float roll){
+	this->lightYaw = fmod(this->lightYaw + yaw, 360);
+	this->lightPitch = fmod(this->lightPitch + pitch, 360);
+}
+
+glm::vec3 CameraClass::GetLightPosition(){
+	return glm::vec3(cos(this->lightPitch * glm::pi<float>()/180) * sin(this->lightYaw * glm::pi<float>()/180) * 5,
+						  sin(this->lightPitch * glm::pi<float>()/180) * 5,
+						  cos(this->lightPitch * glm::pi<float>()/180) * cos(this->lightYaw * glm::pi<float>()/180) * 5);
 }
