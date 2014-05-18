@@ -30,7 +30,7 @@ void ApplicationClass::Init(void)
 	m_pPolyhedron->GeneratePoints(0);
 
 	m_pModelManager = ModelManagerClass::GetInstance();
-	m_pModelManager->LoadModel("Earth.obj", "Earth");
+	m_pModelManager->LoadModel("Cube.obj", "Cube");
 
 	m_bArcBallActive = false;
 	m_bGridActive = true;
@@ -53,9 +53,9 @@ void ApplicationClass::Update(void)
 	float time = m_pSystem->LapClock();
 	if(time > 1)
 	{
-		/*matrix4 matrix = m_pModelManager->GetModelMatrix("Earth");
+		/*matrix4 matrix = m_pModelManager->GetModelMatrix("Cube");
 		matrix = glm::translate(matrix, vector3(0.5f, 0.0f, 0.0f));
-		m_pModelManager->SetModelMatrix(matrix, "Earth");*/
+		m_pModelManager->SetModelMatrix(matrix, "Cube");*/
 		m_pSystem->StartClock();
 	}
 }
@@ -146,9 +146,9 @@ void ApplicationClass::Keyboard(unsigned char key, int x, int y)
 		oZ = glm::rotate(glm::mat4(1.0f), fAngZ, glm::vec3( 0.0f, 0.0f, 1.0f));
 		orientation = oX * oZ * oY;
 		
-		matrix4 matrix = m_pModelManager->GetModelMatrix("Earth");
+		matrix4 matrix = m_pModelManager->GetModelMatrix("Cube");
 		matrix = orientation;
-		m_pModelManager->SetModelMatrix(matrix, "Earth");
+		m_pModelManager->SetModelMatrix(matrix, "Cube");
 	}
 	else
 	{
