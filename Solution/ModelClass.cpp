@@ -275,9 +275,21 @@ Results ModelClass::LoadOBJ(String a_sFileName)
 			m_vShape[nGroupIndex].AddVertexNormal(vNormal[nN3-1]);
 
 			glm::vec3 up = glm::vec3(0, 1, 0);
-			m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN1-1], up));
-			m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN2-1], up));
-			m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN3-1], up));
+			if(glm::abs(glm::normalize(vNormal[nN1-1])) != up){
+				m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN1-1], up));
+			}else{
+				m_vShape[nGroupIndex].AddVertexTangent(glm::vec3(1, 0, 0));
+			}
+			if(glm::abs(glm::normalize(vNormal[nN2-1])) != up){
+				m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN2-1], up));
+			}else{
+				m_vShape[nGroupIndex].AddVertexTangent(glm::vec3(1, 0, 0));
+			}
+			if(glm::abs(glm::normalize(vNormal[nN3-1])) != up){
+				m_vShape[nGroupIndex].AddVertexTangent(glm::cross(vNormal[nN3-1], up));
+			}else{
+				m_vShape[nGroupIndex].AddVertexTangent(glm::vec3(1, 0, 0));
+			}
 
 			m_vShape[nGroupIndex].m_nMaterialIndex = nMaterial;
 		}
