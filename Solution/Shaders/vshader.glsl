@@ -1,39 +1,37 @@
 #version 330
 
+//Alyssa Abraham
+
 in vec4 vPosition; //Vertex Position
 in vec3 vColor; //Vertex Color
 in vec2 vUV; //Vertex UV
-in vec3 normal;
-in vec3 tangent;
+in vec3 normal; //Vertex normal
+in vec3 tangent; //vertex tangent
 
 out vec3 fColor; //Fragment Color (sent to the fragment shader)
 out vec2 UV; //UVCoordinate
-out vec3 norm;
-out vec3 tan;
+out vec3 norm; //normal coordinate
+out vec3 tan; //tangent coordinate
 
-uniform mat4 model;
-uniform mat4 view;
+uniform mat4 model; //model matrix
+uniform mat4 view; //view matrix
 
 uniform mat4 MVP; //Final Composed Matrix
 uniform float d; //bump width
 uniform float r; //roughness
-uniform vec3 lightPosition;
-uniform vec3 eyePosition;
-uniform vec3 hiliteColor;
+
+uniform vec3 lightPosition; //light position
+uniform vec3 eyePosition; //viewer position
+uniform vec3 hiliteColor; //light color
 
 
-vec3 lambda2rgb(float lambda)
+//determine color based on wavelength
+vec3 blend3(vec3 x)
 {
-	const float ultrav = 400.0; //wavelength of ultraviolet light
-	const float infra = 700.0; //wavelength of infrared light
-
-	float a = (lambda - ultrav) / (infra - ultrav);
-
-	vec3 bump = (vec3(a) - vec3(0.75, 0.5, 0.25));
-	vec3 color = (1.0 - d) * bump * bump;
-	return color;
+	vec3 y = 1 - x * x;
+	y = max(y, vec3(0.0));
+	return y;
 }
-
 
 void main()
 {
@@ -41,24 +39,32 @@ void main()
 	vec3 L = normalize(lightPosition - P); //light vector
 	vec3 V = normalize(eyePosition - P); //viewer vector
 	vec3 H = L + V; //halfway vector
-	
-	//calculate interference
+
+	vec3 N = vec3(model * vec4(normal, 1.0)); //normal vector
 	vec3 T = vec3(model * vec4(tangent, 1.0)); //tangent vector
-	float u = abs(dot(T, H));
-	vec3 cdiff = vec3(0.0);
-	for(int m = 1; m <= 3; m++) //
+
+	float u = abs(dot(T, H)) * d; //project onto tangent
+
+	//calculate wavelength interference
+	float w = dot(N, H);
+	float e = r * u / w; 
+
+	float c = exp(-e * e); //shape parameter- controls rainbow map
+
+	vec4 anis = vec4(hiliteColor, 1.0) * vec4(c); //anisotropic highlight
+
+	vec4 cdiff = vec4(0.0, 0.0, 0.0, 1.0); //diffraction color
+
+	for(int m = 1; m < 8; m++)
 	{
-		float lambda = r * u / float(m); //calculate wavelength
-		cdiff += lambda2rgb(lambda);
+		float y = 2 * u / m - 1;
+		cdiff += vec4(blend3(vec3(4 * (y-0.75), //red peak
+			4 * (y - 0.5), //green peak
+			4 * (y - 0.25))), //blue peak
+			1.0);
 	}
 
-	//calculate color of highlight
-	vec3 N = vec3(model * vec4(normal, 1.0)); //normal vector
-	float w = dot(N, H);
-	float e = r * u /w;
-	vec3 hilight = exp(-e * e) * hiliteColor;
-
 	gl_Position = MVP * vPosition;
-	fColor = vec3(0.8 * cdiff + hilight);
+	fColor = vec3(cdiff + anis);
 	UV = vUV;
 }
